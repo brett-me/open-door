@@ -1,0 +1,51 @@
+// ===========================
+//   ch01: SCALAR DATA TYPES
+// ===========================
+// int, float, bool, char
+
+fn main() {
+    integer_type(); // i (8, 32 --default, 64) or u (8, 32, 64)
+    float_type(); // f32 --default, f64
+    boolean_type(); // bool: true or false
+    char_type();
+}
+// ===========
+//   integer
+// ===========
+// signed (i), positive and negative values, size 2**(n-1) to 2**(n-1) - 1.
+// unsigned (u), only positive values, size 2**n - 1.
+// i32 default
+fn integer_type() {
+    let x: i32 = -2147483648; // -2147483648 to 2147483647
+    let y: u8 = 255; // 0 - 255
+    let z: u64 = 18446744073709551615;
+    println!("Int: signed (i32) {x} and unsigned (u8) {y}, biggest unsigned (u64) {z}");
+}
+// ==========
+//   floats
+// ==========
+// 32 (default), f64
+fn float_type() {
+    let pi: f64 = 3.14159265358979323846264338327950288;
+    println!("Float: pi to f64 precision is: {pi}");
+}
+// ============
+//   booleans
+// ============
+// true, false
+// bool
+fn boolean_type() {
+    let is_boolean_type: bool = true;
+    if is_boolean_type {
+        println!("Bool: true");
+    }
+}
+// ========
+//   char
+// ========
+// denoted by single quotes ''
+// can be any single character including emojis / icons
+fn char_type() {
+    let rusty: char = '🦀';
+    println!("Char: {rusty}");
+}
