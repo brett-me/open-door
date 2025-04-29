@@ -62,7 +62,7 @@ fn slice_type() {
 fn string_type() {
     let mut name: String = String::from("john");
     println!("{name}");
-    brett.push_str(" cena"); // push_str appends to String
+    name.push_str(" cena"); // push_str appends to String
     println!("{name}"); // updated String ('brett smith')
 }
 
