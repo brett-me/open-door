@@ -10,7 +10,7 @@ fn main() {
     // a reference to s1 is passed as an argument to function calculate_length
     // s1 preserves ownership of "rust"
     println!("S1: The length of word '{s1}' is {}", calculate_length(&s1));
-    let s2: String = s1; // ownership moved from s1 to s2
+    let s2: String = s1; // ownership moved from s1 to s2 (shadowing)
     // println!("{s1}"); this produces an error because s1 is out of scope
     println!("S2: The length of word '{s2}' is {}", calculate_length(&s2));
     let _my_details = {
