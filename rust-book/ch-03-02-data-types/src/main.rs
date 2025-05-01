@@ -1,5 +1,3 @@
-use std::u16;
-
 // ================================================================================================
 //   CH03-02: DATA TYPES
 // ================================================================================================
@@ -12,6 +10,7 @@ fn main() {
     tuple_example();
     destructure_tuple_target();
     direct_access_tuple_element();
+    array_example();
 }
 
 // ================================================================================================
@@ -116,4 +115,29 @@ fn direct_access_tuple_element() {
     println!("access a tuple element directly: let five_hundred = tup.0");
     println!("{five_hundred}");
     println!();
+}
+
+// ================================================================================================
+// 2. array
+// ================================================================================================
+// collection of same type elements
+// fixed length, cannot grow or shrink after being declared
+
+fn array_example() {
+    let a: [i32; 5] = [1, 2, 3, 4, 5];
+    // annotation in square brackets, [element type; number of elements]
+    println!("array example: let a: [i32; 5] = [1, 2, 3, 4, 5]");
+    println!("{:?}", a);
+    println!();
+    println!("shorthand to create an array of same value elemements:");
+    println!("let a = [3; 5];");
+    let a = [3; 5];
+    println!("{:?}", a);
+    // accessing an element in an array
+    let a: [u8; 3] = [1, 2, 3];
+    let first = a[0];
+    println!();
+    println!("accessing an element in an array: let first = a[0];");
+    println!("{:?}", a);
+    println!("{first}");
 }
