@@ -1,13 +1,13 @@
-fn fill_vec(vec: Vec<i32>) -> Vec<i32> {
-    let mut vec = vec;
-
+fn fill_vec(vec: &mut Vec<i32>) -> Vec<i32> {
     vec.push(88);
-
-    vec
+    vec.to_vec()
 }
 
 fn main() {
     // You can optionally experiment here.
+    let mut vec0 = vec![22, 44, 66];
+    let vec1 = fill_vec(&mut vec0);
+    println!("vec0 = {:?}... vec1 = {:?}", vec0, vec1);
 }
 
 #[cfg(test)]
@@ -18,12 +18,10 @@ mod tests {
     // fix the compiler error in the test.
     #[test]
     fn move_semantics2() {
-        let vec0 = vec![22, 44, 66];
-        let expected_vec0 = vec![22, 44, 66];
+        let mut vec0 = vec![22, 44, 66];
+        let vec1 = fill_vec(&mut vec0);
 
-        let vec1 = fill_vec(vec0);
-
-        assert_eq!(expected_vec0, [22, 44, 66]);
+        assert_eq!(vec0, [22, 44, 66]);
         assert_eq!(vec1, [22, 44, 66, 88]);
     }
 }
