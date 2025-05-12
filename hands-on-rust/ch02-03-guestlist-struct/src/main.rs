@@ -40,6 +40,6 @@ fn main() {
 
     match known_visitor {
         Some(visitor) => visitor.greet_visitor(),
-        None => println!("You are not on the visitor list."),
+        None => println!("You're smelly, go away!"),
     }
 }
