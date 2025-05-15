@@ -33,5 +33,5 @@ fn main() {
     println!("f64 precision: {} digits", f64::DIGITS);
     println!();
     let million: i32 = 1_000_000;
-    println!("{million:d}");
+    println!("{million}");
 }
