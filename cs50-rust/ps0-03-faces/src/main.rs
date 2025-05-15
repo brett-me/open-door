@@ -1,5 +1,10 @@
 use std::io::stdin;
 
+fn main() {
+    let raw_input = get_input();
+    println!("{}", replace_smiley(raw_input));
+}
+
 fn get_input() -> String {
     let mut user_input: String = String::new();
     stdin()
@@ -10,9 +15,4 @@ fn get_input() -> String {
 
 fn replace_smiley(raw_input: String) -> String {
     raw_input.replace(":)", "😊").replace(":(", "🙁")
-}
-
-fn main() {
-    let raw_input = get_input();
-    println!("{}", replace_smiley(raw_input));
 }
