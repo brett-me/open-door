@@ -5,7 +5,7 @@ fn main() {
     println!("enter mass in kg (rounded to nearest kg): ");
     let mass = get_mass();
     println!();
-    println!("energy = {} kilojoules", energy(mass));
+    println!("energy = {} joules", energy(mass));
 }
 
 fn get_mass() -> u64 {
@@ -21,5 +21,5 @@ fn get_mass() -> u64 {
 
 fn energy(mass: u64) -> u64 {
     const SPEED_OF_LIGHT_MS: u64 = 299_792_458;
-    (mass * SPEED_OF_LIGHT_MS) / 1000
+    mass * SPEED_OF_LIGHT_MS
 }
