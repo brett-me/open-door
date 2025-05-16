@@ -1,9 +1,11 @@
 fn main() {
     let input: String = String::from("input");
     transfer_ownership(input); // input no longer valid
+
     let input: String = String::from("input"); // variable input declared again (new binding)
     immutable_reference(&input);
     println!("Original owner, {}", input); // variable input still valid
+
     let mut input2: String = String::from("input2");
     mutable_reference(&mut input2);
     println!("Original owner, {}", input2); // original structure valid, but has changed
