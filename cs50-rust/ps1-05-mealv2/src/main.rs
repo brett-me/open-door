@@ -5,12 +5,14 @@ use std::{
 };
 
 fn main() {
+    // use match to handle quit option and related text
     match get_valid_input() {
         Some(input) => response(&input),
         None => println!("Exiting on request..."),
     }
 }
 
+// return type Option enum to gracefully handle quit option and returning None
 fn get_valid_input() -> Option<Vec<u8>> {
     // time format: hh:mm
     let time_format = Regex::new(r"^\d{2}:\d{2}$").unwrap();
