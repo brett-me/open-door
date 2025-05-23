@@ -1,0 +1,6 @@
+[package]
+name = "ex005-primitives"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
