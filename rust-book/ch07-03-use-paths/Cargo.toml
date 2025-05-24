@@ -1,0 +1,6 @@
+[package]
+name = "ch07-03-use-paths"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
