@@ -1,0 +1,6 @@
+[package]
+name = "ch07-02-01-modules-basics"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
